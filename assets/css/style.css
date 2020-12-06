@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #1acc8d;
+  border: 6px solid #f9813a;
   border-top-color: #d2f9eb;
   border-radius: 50%;
   width: 60px;
@@ -1680,29 +1680,22 @@ section {
 }
 
 /* Animation Text  */
-.text{
-  
+#contain {
+  /* line-height: 1.5rem; */
   font-size: x-large;
+  margin-bottom: 25px;
 }
-.text .content{
-  animation-delay: 7s;
-  display: inline;
+#contain::after {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: .5rem;
+  background-color: #1a1c20;
+  animation: blinking 1s infinite;
 }
-.text .dash{
-	display: inline-block;
-	height: 3px;
-	width: 20px;
-	background-color: #66ffcc;
-	animation: blink .5s infinite linear;
-}
-@keyframes blink{
-	0%{
-		opacity: 1;
-	}
-	99%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
+
+@keyframes blinking {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }

@@ -84,9 +84,7 @@
             <h1>Build Your Website With <span>DROID</span></h1>
             <h2>We are team of talanted developers & designers making websites and web applications</h2>
             <!-- animated text  -->
-            <div class="text">
-              <div class="content"></div>
-              <div class="dash"></div>
+            <div id="contain">
             </div>
             <div class="text-center text-lg-left">
               <a href="#about" class="btn-get-started scrollto" style="background-color: #1a1c20;">Get Started</a>
@@ -920,32 +918,22 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    (function(){
-	var app;
-	$(document).ready(function(){
-		return app.init();
-	});
-	app = {
-		text: "Passion Lead us",
-		index: 0,
-		chars: 0,
-		speed: 100,
-		container: '.text .content',
-		init: function(){
-			this.chars = this.text.length;
-			return this.write();
-		},
-		write: function(){
-			$(this.container).append(this.text[this.index]);
-			if(this.index<this.chars){
-				this.index++;
-				return window.setTimeout(function(){
-					return app.write();
-				}, this.speed);
-			}
-		}
-	};
-}.call(this));
+    const text = `Passion Lead Us!..`
+const chars = text.split('')
+
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+const container = document.getElementById('contain')
+
+function appendChar (i) {
+  if (i >= chars.length) {
+    return
+  }
+  container.innerHTML += chars[i]
+  const ms = Math.ceil(Math.random() * 90) + 20
+  sleep(ms).then(appendChar.bind(null, i + 1))
+}
+
+sleep(3000).then(appendChar.bind(null, 0));
     
   </script>
 
