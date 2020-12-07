@@ -10,8 +10,12 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
+  overflow: scroll;
 }
-
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 a {
   color: #1acc8d;
 }
@@ -90,13 +94,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: #1acc8d;
+  background: #f9813a;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #2be4a2;
+  background: #f89053;
   color: #fff;
 }
 
