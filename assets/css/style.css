@@ -630,7 +630,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #1acc8d;
+  background: #1a1c20;
   margin: 4px 10px;
 }
 
@@ -962,7 +962,7 @@ section {
 .details .content h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #010483;
+  color: #f9813a;
 }
 
 .details .content ul {
@@ -1702,4 +1702,29 @@ section {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+/* ==== Cards using Bootstrap codepen=== */
+
+#cards .card {
+  border-radius: 20px;
+  min-height: 100%;
+}
+
+#cards .heading-border {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+}
+
+#cards .card .user-picture img {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  background: #f8f9fa!important;
+  padding: 10px;
+}
+
+#cards .card .user-content .user-name {
+  margin-right: 150px;
 }
