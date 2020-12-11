@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #f9813a;
+  background: #00E0EA;
 }
 
 #header.header-transparent {
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-  background:#f9813a;
+  background:#66e0d6;
   height: 60px;
 }
 
@@ -409,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero:before {
   content: "";
   /* background: rgba(2, 161, 126, 0.91); */
-  background: #f9813a;
+  background:linear-gradient(#66e0d6,#52dcd1,#94e9e2);
   position: absolute;
   bottom: 0;
   top: 0;
